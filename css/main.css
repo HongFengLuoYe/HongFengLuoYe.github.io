@@ -177,7 +177,7 @@ body {
 body {
   background: var(--body-bg-color);
   color: var(--text-color);
-  font-family: 'Hannotate SC Regular', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGWWenKai-Regular', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1em;
   line-height: 2;
 }
@@ -193,7 +193,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto Slab', 'Hannotate SC Regular', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Roboto Slab', 'LXGWWenKai-Regular', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -1027,7 +1027,7 @@ pre .javascript .function {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: 'Hannotate SC Regular', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGWWenKai-Regular', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   margin: 0;
@@ -1219,7 +1219,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #180529;
+  background: #af8557;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1518,7 +1518,7 @@ pre .javascript .function {
   opacity: 0.8;
 }
 .post-body {
-  font-family: 'Hannotate SC Regular', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGWWenKai-Regular', "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -1816,7 +1816,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'Hannotate SC Regular', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGWWenKai-Regular', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
   text-align: center;
@@ -2461,4 +2461,40 @@ mjx-container + br {
 }
 .back-to-top.back-to-top-on {
   margin-top: 16px;
+}
+@font-face {
+  font-family: 'LXGWWenKai';
+  src: url("/fonts/LXGWWenKai-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+body {
+  font-family: 'LXGWWenKai', 'Noto Serif SC', 'Microsoft YaHei', sans-serif;
+}
+.post-body {
+  font-family: 'LXGWWenKai', 'Noto Serif SC', 'Microsoft YaHei', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-title,
+.post-title a,
+.post-header,
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5,
+.post-body h6 {
+  font-family: 'LXGWWenKai', sans-serif !important;
+}
+.post-title,
+.post-meta,
+.post-meta span,
+.post-meta time,
+.post-header,
+.post-header span {
+  font-family: 'LXGWWenKai', sans-serif !important;
 }
