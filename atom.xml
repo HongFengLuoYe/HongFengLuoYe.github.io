@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>HFY&#39;BLOG</title>
-  <icon>http://example.com/favicon.ico</icon>
+  <icon>https://hongfengluoye.github.io/favicon.ico</icon>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://hongfengluoye.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://hongfengluoye.github.io/"/>
   <updated>2024-12-10T02:35:57.582Z</updated>
-  <id>http://example.com/</id>
+  <id>https://hongfengluoye.github.io/</id>
   
   <author>
     <name>HFY</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Alibaba</title>
-    <link href="http://example.com/2024/12/10/%E5%95%86%E4%B8%9A/Alibaba/"/>
-    <id>http://example.com/2024/12/10/%E5%95%86%E4%B8%9A/Alibaba/</id>
+    <link href="https://hongfengluoye.github.io/2024/12/10/%E5%95%86%E4%B8%9A/Alibaba/"/>
+    <id>https://hongfengluoye.github.io/2024/12/10/%E5%95%86%E4%B8%9A/Alibaba/</id>
     <published>2024-12-10T02:33:46.000Z</published>
     <updated>2024-12-10T02:35:57.582Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="商业" scheme="http://example.com/categories/%E5%95%86%E4%B8%9A/"/>
+    <category term="商业" scheme="https://hongfengluoye.github.io/categories/%E5%95%86%E4%B8%9A/"/>
     
-    <category term="Alibaba" scheme="http://example.com/categories/%E5%95%86%E4%B8%9A/Alibaba/"/>
+    <category term="Alibaba" scheme="https://hongfengluoye.github.io/categories/%E5%95%86%E4%B8%9A/Alibaba/"/>
     
     
   </entry>
   
   <entry>
     <title>数学</title>
-    <link href="http://example.com/2024/12/09/%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%AD%A6/"/>
-    <id>http://example.com/2024/12/09/%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%AD%A6/</id>
+    <link href="https://hongfengluoye.github.io/2024/12/09/%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%AD%A6/"/>
+    <id>https://hongfengluoye.github.io/2024/12/09/%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%AD%A6/</id>
     <published>2024-12-09T08:15:34.000Z</published>
     <updated>2026-02-07T11:49:50.157Z</updated>
     
@@ -59,36 +59,36 @@
     
     
     
-    <category term="科学" scheme="http://example.com/categories/%E7%A7%91%E5%AD%A6/"/>
+    <category term="科学" scheme="https://hongfengluoye.github.io/categories/%E7%A7%91%E5%AD%A6/"/>
     
-    <category term="数学" scheme="http://example.com/categories/%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%AD%A6/"/>
+    <category term="数学" scheme="https://hongfengluoye.github.io/categories/%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%AD%A6/"/>
     
     
   </entry>
   
   <entry>
     <title>哲学简史</title>
-    <link href="http://example.com/2023/03/22/%E5%93%B2%E5%AD%A6/%E4%B8%9C%E6%96%B9/"/>
-    <id>http://example.com/2023/03/22/%E5%93%B2%E5%AD%A6/%E4%B8%9C%E6%96%B9/</id>
+    <link href="https://hongfengluoye.github.io/2023/03/22/%E5%93%B2%E5%AD%A6/%E4%B8%9C%E6%96%B9/"/>
+    <id>https://hongfengluoye.github.io/2023/03/22/%E5%93%B2%E5%AD%A6/%E4%B8%9C%E6%96%B9/</id>
     <published>2023-03-22T10:36:35.000Z</published>
     <updated>2024-12-09T08:12:43.225Z</updated>
     
     
     
     
-    <category term="哲学" scheme="http://example.com/categories/%E5%93%B2%E5%AD%A6/"/>
+    <category term="哲学" scheme="https://hongfengluoye.github.io/categories/%E5%93%B2%E5%AD%A6/"/>
     
-    <category term="西方" scheme="http://example.com/categories/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/"/>
+    <category term="西方" scheme="https://hongfengluoye.github.io/categories/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/"/>
     
-    <category term="哲学简史" scheme="http://example.com/categories/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/%E5%93%B2%E5%AD%A6%E7%AE%80%E5%8F%B2/"/>
+    <category term="哲学简史" scheme="https://hongfengluoye.github.io/categories/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/%E5%93%B2%E5%AD%A6%E7%AE%80%E5%8F%B2/"/>
     
     
   </entry>
   
   <entry>
     <title>儒释道</title>
-    <link href="http://example.com/2023/03/22/%E4%BA%BA%E6%96%87/%E6%96%87%E5%8C%96/%E5%84%92%E9%87%8A%E9%81%93/"/>
-    <id>http://example.com/2023/03/22/%E4%BA%BA%E6%96%87/%E6%96%87%E5%8C%96/%E5%84%92%E9%87%8A%E9%81%93/</id>
+    <link href="https://hongfengluoye.github.io/2023/03/22/%E4%BA%BA%E6%96%87/%E6%96%87%E5%8C%96/%E5%84%92%E9%87%8A%E9%81%93/"/>
+    <id>https://hongfengluoye.github.io/2023/03/22/%E4%BA%BA%E6%96%87/%E6%96%87%E5%8C%96/%E5%84%92%E9%87%8A%E9%81%93/</id>
     <published>2023-03-22T10:31:18.000Z</published>
     <updated>2025-11-13T06:26:03.806Z</updated>
     
@@ -103,19 +103,19 @@
     
     
     
-    <category term="人文" scheme="http://example.com/categories/%E4%BA%BA%E6%96%87/"/>
+    <category term="人文" scheme="https://hongfengluoye.github.io/categories/%E4%BA%BA%E6%96%87/"/>
     
-    <category term="文化" scheme="http://example.com/categories/%E4%BA%BA%E6%96%87/%E6%96%87%E5%8C%96/"/>
+    <category term="文化" scheme="https://hongfengluoye.github.io/categories/%E4%BA%BA%E6%96%87/%E6%96%87%E5%8C%96/"/>
     
-    <category term="儒释道" scheme="http://example.com/categories/%E4%BA%BA%E6%96%87/%E6%96%87%E5%8C%96/%E5%84%92%E9%87%8A%E9%81%93/"/>
+    <category term="儒释道" scheme="https://hongfengluoye.github.io/categories/%E4%BA%BA%E6%96%87/%E6%96%87%E5%8C%96/%E5%84%92%E9%87%8A%E9%81%93/"/>
     
     
   </entry>
   
   <entry>
     <title>物理史</title>
-    <link href="http://example.com/2023/03/22/%E7%A7%91%E5%AD%A6/%E7%89%A9%E7%90%86/"/>
-    <id>http://example.com/2023/03/22/%E7%A7%91%E5%AD%A6/%E7%89%A9%E7%90%86/</id>
+    <link href="https://hongfengluoye.github.io/2023/03/22/%E7%A7%91%E5%AD%A6/%E7%89%A9%E7%90%86/"/>
+    <id>https://hongfengluoye.github.io/2023/03/22/%E7%A7%91%E5%AD%A6/%E7%89%A9%E7%90%86/</id>
     <published>2023-03-22T10:27:15.000Z</published>
     <updated>2025-11-13T07:59:11.622Z</updated>
     
@@ -130,40 +130,40 @@
     
     
     
-    <category term="科学" scheme="http://example.com/categories/%E7%A7%91%E5%AD%A6/"/>
+    <category term="科学" scheme="https://hongfengluoye.github.io/categories/%E7%A7%91%E5%AD%A6/"/>
     
-    <category term="物理" scheme="http://example.com/categories/%E7%A7%91%E5%AD%A6/%E7%89%A9%E7%90%86/"/>
+    <category term="物理" scheme="https://hongfengluoye.github.io/categories/%E7%A7%91%E5%AD%A6/%E7%89%A9%E7%90%86/"/>
     
     
-    <category term="天文" scheme="http://example.com/tags/%E5%A4%A9%E6%96%87/"/>
+    <category term="天文" scheme="https://hongfengluoye.github.io/tags/%E5%A4%A9%E6%96%87/"/>
     
-    <category term="宇宙" scheme="http://example.com/tags/%E5%AE%87%E5%AE%99/"/>
+    <category term="宇宙" scheme="https://hongfengluoye.github.io/tags/%E5%AE%87%E5%AE%99/"/>
     
   </entry>
   
   <entry>
     <title>哲学简史</title>
-    <link href="http://example.com/2023/03/22/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/"/>
-    <id>http://example.com/2023/03/22/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/</id>
+    <link href="https://hongfengluoye.github.io/2023/03/22/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/"/>
+    <id>https://hongfengluoye.github.io/2023/03/22/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/</id>
     <published>2023-03-22T10:20:40.000Z</published>
     <updated>2023-03-23T14:06:02.000Z</updated>
     
     
     
     
-    <category term="哲学" scheme="http://example.com/categories/%E5%93%B2%E5%AD%A6/"/>
+    <category term="哲学" scheme="https://hongfengluoye.github.io/categories/%E5%93%B2%E5%AD%A6/"/>
     
-    <category term="西方" scheme="http://example.com/categories/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/"/>
+    <category term="西方" scheme="https://hongfengluoye.github.io/categories/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/"/>
     
-    <category term="哲学简史" scheme="http://example.com/categories/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/%E5%93%B2%E5%AD%A6%E7%AE%80%E5%8F%B2/"/>
+    <category term="哲学简史" scheme="https://hongfengluoye.github.io/categories/%E5%93%B2%E5%AD%A6/%E8%A5%BF%E6%96%B9/%E5%93%B2%E5%AD%A6%E7%AE%80%E5%8F%B2/"/>
     
     
   </entry>
   
   <entry>
     <title>Http协议</title>
-    <link href="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/HTTP%E5%8D%8F%E8%AE%AE/"/>
-    <id>http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/HTTP%E5%8D%8F%E8%AE%AE/</id>
+    <link href="https://hongfengluoye.github.io/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/HTTP%E5%8D%8F%E8%AE%AE/"/>
+    <id>https://hongfengluoye.github.io/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/HTTP%E5%8D%8F%E8%AE%AE/</id>
     <published>2023-03-22T09:54:22.000Z</published>
     <updated>2023-03-23T14:06:02.000Z</updated>
     
@@ -175,27 +175,27 @@
   
   <entry>
     <title>Protocol</title>
-    <link href="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/protocol/"/>
-    <id>http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/protocol/</id>
+    <link href="https://hongfengluoye.github.io/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/protocol/"/>
+    <id>https://hongfengluoye.github.io/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/protocol/</id>
     <published>2023-03-22T09:37:32.000Z</published>
     <updated>2023-03-23T14:06:02.000Z</updated>
     
     
     
     
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://hongfengluoye.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="网络" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="https://hongfengluoye.github.io/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/"/>
     
-    <category term="Protocol" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/Protocol/"/>
+    <category term="Protocol" scheme="https://hongfengluoye.github.io/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/Protocol/"/>
     
     
   </entry>
   
   <entry>
     <title>Java</title>
-    <link href="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
-    <id>http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/</id>
+    <link href="https://hongfengluoye.github.io/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+    <id>https://hongfengluoye.github.io/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/</id>
     <published>2023-03-22T09:17:23.000Z</published>
     <updated>2025-11-13T07:57:39.845Z</updated>
     
@@ -210,14 +210,14 @@
     
     
     
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://hongfengluoye.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="编程语言" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="编程语言" scheme="https://hongfengluoye.github.io/categories/%E6%8A%80%E6%9C%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="JAVA" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/JAVA/"/>
+    <category term="JAVA" scheme="https://hongfengluoye.github.io/categories/%E6%8A%80%E6%9C%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/JAVA/"/>
     
     
-    <category term="编程语言" scheme="http://example.com/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <category term="编程语言" scheme="https://hongfengluoye.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
