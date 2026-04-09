@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="之前，因为工作原因需要将许多工作和学习的资料保存下来，供日后使用，在选择各种笔记工具时比较犯难，所以想把这些东西写下来，做保留。所以想到用博客记录下，hexo算是目前比较好的博客工具。此次，只是为了记录安装过程。简化了很多流程。如果需要学习的童鞋：请转至 教程网址 安装使用准备工作安装Node.js Node.js 为大多数平台提供了官方的安装程序:https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;do">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog">
+<meta property="og:url" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/index.html">
+<meta property="og:site_name" content="HFY&#39;s Blog">
+<meta property="og:description" content="之前，因为工作原因需要将许多工作和学习的资料保存下来，供日后使用，在选择各种笔记工具时比较犯难，所以想把这些东西写下来，做保留。所以想到用博客记录下，hexo算是目前比较好的博客工具。此次，只是为了记录安装过程。简化了很多流程。如果需要学习的童鞋：请转至 教程网址 安装使用准备工作安装Node.js Node.js 为大多数平台提供了官方的安装程序:https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;do">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200304_19.jpg">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/16328000.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/163280001.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/163280002.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200305_22.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/15972524335510.jpg">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/nginx-aliyun.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200307_28.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200307_24.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200307_25.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200307_27.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200308_30.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200308_31.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200308_32.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200308_33.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_44.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_45.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_46.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_47.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_48.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_50.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_51.png">
+<meta property="og:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_53.png">
+<meta property="article:published_time" content="2023-03-22T08:57:56.000Z">
+<meta property="article:modified_time" content="2026-04-07T08:25:47.420Z">
+<meta property="article:author" content="HFY">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200304_19.jpg">
+
+
+<link rel="canonical" href="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/","path":"2023/03/22/技术/Blog/","title":"Blog"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Blog | HFY's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">HFY's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">安装使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.1.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Node-js"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Git"><span class="nav-number">1.1.2.</span> <span class="nav-text">安装Git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BAmd%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.1.</span> <span class="nav-text">新建md文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99"><span class="nav-number">1.2.2.</span> <span class="nav-text">生成静态网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%92%8C%E8%B0%83%E8%AF%95"><span class="nav-number">1.2.3.</span> <span class="nav-text">开启本地服务和调试</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0GitHub"><span class="nav-number">2.</span> <span class="nav-text">上传GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAhexo%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2"><span class="nav-number">2.1.</span> <span class="nav-text">创建hexo一键部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">2.2.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87ssh%E9%83%A8%E7%BD%B2%E4%BB%A3%E7%A0%81"><span class="nav-number">2.3.</span> <span class="nav-text">通过ssh部署代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">更换主题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98"><span class="nav-number">3.1.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%85%83%E7%B4%A0"><span class="nav-number">3.2.</span> <span class="nav-text">自定义元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD"><span class="nav-number">3.3.</span> <span class="nav-text">本地图片加载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="nav-number">3.3.1.</span> <span class="nav-text">第一种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="nav-number">3.3.2.</span> <span class="nav-text">第二种方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91"><span class="nav-number">4.</span> <span class="nav-text">部署到阿里云</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%8B%E9%9A%86%E4%BB%A3%E7%A0%81"><span class="nav-number">4.1.</span> <span class="nav-text">克隆代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Nginx%E5%92%8CGit"><span class="nav-number">4.1.1.</span> <span class="nav-text">安装Nginx和Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8EGitHub%E5%85%8B%E9%9A%86%E4%BB%A3%E7%A0%81"><span class="nav-number">4.1.2.</span> <span class="nav-text">从GitHub克隆代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AENginx%E6%A0%B9%E7%9B%AE%E5%BD%95"><span class="nav-number">4.1.3.</span> <span class="nav-text">配置Nginx根目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAGit%E9%92%A9%E5%AD%90"><span class="nav-number">4.2.</span> <span class="nav-text">创建Git钩子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAgit%E7%94%A8%E6%88%B7"><span class="nav-number">4.2.1.</span> <span class="nav-text">创建git用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%EF%BC%9A"><span class="nav-number">4.2.2.</span> <span class="nav-text">修改用户权限：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E5%92%8C%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2"><span class="nav-number">4.3.</span> <span class="nav-text">配置阿里云和一键部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AESSH%E5%85%AC%E9%92%A5%EF%BC%9A"><span class="nav-number">4.3.1.</span> <span class="nav-text">配置SSH公钥：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEHooks"><span class="nav-number">4.3.2.</span> <span class="nav-text">设置Hooks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE"><span class="nav-number">4.3.3.</span> <span class="nav-text">修改本地配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E5%8A%9F%E8%83%BD"><span class="nav-number">5.</span> <span class="nav-text">高级功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E6%97%B6%E5%88%B7%E6%96%B0"><span class="nav-number">5.1.</span> <span class="nav-text">实时刷新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDLiveReload"><span class="nav-number">5.1.1.</span> <span class="nav-text">下载LiveReload</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">5.1.2.</span> <span class="nav-text">添加文件夹</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86"><span class="nav-number">5.2.</span> <span class="nav-text">博客加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%80%A7"><span class="nav-number">5.2.1.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">5.2.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8"><span class="nav-number">5.2.3.</span> <span class="nav-text">快速使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E4%BF%A1%E6%81%AF%E5%A4%B4"><span class="nav-number">5.2.4.</span> <span class="nav-text">文章信息头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config-yml"><span class="nav-number">5.2.5.</span> <span class="nav-text">_config.yml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-number">5.2.6.</span> <span class="nav-text">配置优先级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E5%88%B6%E7%89%88%E6%9D%83%E9%A1%B5"><span class="nav-number">5.3.</span> <span class="nav-text">定制版权页</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#iPhone%E4%BD%BF%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">iPhone使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E8%B6%8A%E7%8B%B1"><span class="nav-number">6.1.</span> <span class="nav-text">手机越狱</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#checkra1n"><span class="nav-number">6.1.1.</span> <span class="nav-text">checkra1n</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85NewTerm-2"><span class="nav-number">6.1.2.</span> <span class="nav-text">安装NewTerm 2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C-1"><span class="nav-number">6.2.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85OpenSSH"><span class="nav-number">6.2.1.</span> <span class="nav-text">安装OpenSSH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git"><span class="nav-number">6.2.2.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-number">6.2.3.</span> <span class="nav-text">Node.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-number">6.3.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo-1"><span class="nav-number">6.3.1.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98-1"><span class="nav-number">6.3.2.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5markdwon%E8%B5%84%E6%BA%90"><span class="nav-number">6.3.3.</span> <span class="nav-text">导入markdwon资源</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="HFY"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">HFY</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HongFengLuoYe" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HongFengLuoYe" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="HFY">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HFY's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Blog | HFY's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Blog
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-22 16:57:56" itemprop="dateCreated datePublished" datetime="2023-03-22T16:57:56+08:00">2023-03-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-04-07 16:25:47" itemprop="dateModified" datetime="2026-04-07T16:25:47+08:00">2026-04-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>之前，因为工作原因需要将许多工作和学习的资料保存下来，供日后使用，在选择各种笔记工具时比较犯难，所以想把这些东西写下来，做保留。所以想到用博客记录下，hexo算是目前比较好的博客工具。此次，只是为了记录安装过程。简化了很多流程。如果需要学习的童鞋：请转至 <strong><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=PsXWbI2Mqu0">教程网址</a></strong></p>
+<h1 id="安装使用"><a href="#安装使用" class="headerlink" title="安装使用"></a>安装使用</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><blockquote>
+<p>Node.js 为大多数平台提供了官方的安装程序:<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+</blockquote>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><blockquote>
+<p>下载 安装程序:<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/git-osx-installer/">https://sourceforge.net/projects/git-osx-installer/</a></p>
+</blockquote>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<h3 id="新建md文件"><a href="#新建md文件" class="headerlink" title="新建md文件"></a>新建md文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成静态网站"><a href="#生成静态网站" class="headerlink" title="生成静态网站"></a>生成静态网站</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>生成静态文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>启动服务器。默认情况下，访问网址为： <a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
+<h3 id="开启本地服务和调试"><a href="#开启本地服务和调试" class="headerlink" title="开启本地服务和调试"></a>开启本地服务和调试</h3><p>可以同时开启服务和监控生成静态文件服务，用于调试。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate -w</span><br></pre></td></tr></table></figure>
+<p>再开一个终端窗口</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>然后可以通过Mweb编辑，在浏览器中查看效果。</p>
+<h1 id="上传GitHub"><a href="#上传GitHub" class="headerlink" title="上传GitHub"></a>上传GitHub</h1><h2 id="创建hexo一键部署"><a href="#创建hexo一键部署" class="headerlink" title="创建hexo一键部署"></a>创建hexo一键部署</h2><p>安装hexo-deployer-git</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+
+<p>如果不确定有没有hexo-deployer-git，可以</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nmp list hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<p>修改配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repository url&gt; #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span><br><span class="line">  branch: [branch]</span><br><span class="line">  message: [message]</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>创建新的仓库，如果需要通过GitHub Page访问网站，创建仓库时候必须符合这样的规则：<a target="_blank" rel="noopener" href="https://pages.github.com/">https://pages.github.com/</a></p>
+<h2 id="通过ssh部署代码"><a href="#通过ssh部署代码" class="headerlink" title="通过ssh部署代码"></a>通过ssh部署代码</h2><p>生成ssh key</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh</span><br></pre></td></tr></table></figure>
+<p><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200304_19.jpg"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygan -t rsa</span><br></pre></td></tr></table></figure>
+<p>(千万不要输密码)<br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/16328000.png" alt="生成秘钥"></p>
+<p>生成两个文件，id_rsa.pub公钥，id_rsa私钥,查看文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd .ssh</span><br><span class="line">$ ls</span><br><span class="line">$ cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>将公钥添加GitHub上<br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/163280001.png"></p>
+<p>测试添加成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/163280002.png"><br>最后实现一键部署到GitHub</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<h1 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h1><h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>看了好多主题，最后还是参考了<a target="_blank" rel="noopener" href="https://blog.devtang.com/">唐巧</a>的博客，既有分类和也很美观。<strong>archer主题</strong> 参考下面网址：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/fi3ework/hexo-theme-archer</span><br></pre></td></tr></table></figure>
+<h2 id="自定义元素"><a href="#自定义元素" class="headerlink" title="自定义元素"></a>自定义元素</h2><p><strong>看下面哦</strong>😃</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/fi3ework/hexo-theme-archer</span><br></pre></td></tr></table></figure>
+<h2 id="本地图片加载"><a href="#本地图片加载" class="headerlink" title="本地图片加载"></a>本地图片加载</h2><p>进入博客目录，安装该插件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<p>修改_config.yml文件，post_asset_folder:改为true。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+
+<h3 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a>第一种方法</h3><p>完成后新建md会生成同名文件，在md中引用图片就行。<br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200305_22.png"></p>
+<p>例如上面这个图片就是引进去的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](Snip20200305_22.png)</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二种方法"><a href="#第二种方法" class="headerlink" title="第二种方法"></a>第二种方法</h3><p>在mweb中可以直接插入本地图片，例如<br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/15972524335510.jpg"><br>需要将media中的图片复制一份到md会生成同名文件夹中，然后再生成。</p>
+<h1 id="部署到阿里云"><a href="#部署到阿里云" class="headerlink" title="部署到阿里云"></a>部署到阿里云</h1><p>先搞明白Hexo博客从搭建到自动发布的架构，才能更好的理解我们每一步进行的操作。不然只跟着步骤过了一遍，却不知道为什么这么做。<br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/nginx-aliyun.png"></p>
+<p>好了，原理懂了，我们说下我做的思路：1.从GitHub克隆过来我的仓库到网站根目录；2.新建Git仓库，并设置git-hooks；3.配置ssh公钥和hexo，一键部署。下面我们就开始吧：</p>
+<blockquote>
+<p>环境：阿里云 ubuntu16.04</p>
+</blockquote>
+<h2 id="克隆代码"><a href="#克隆代码" class="headerlink" title="克隆代码"></a>克隆代码</h2><h3 id="安装Nginx和Git"><a href="#安装Nginx和Git" class="headerlink" title="安装Nginx和Git"></a>安装Nginx和Git</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install nginx</span><br><span class="line">apt-get install git</span><br></pre></td></tr></table></figure>
+<p>配置好全局 git 的用户名和邮箱，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;姓名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="从GitHub克隆代码"><a href="#从GitHub克隆代码" class="headerlink" title="从GitHub克隆代码"></a>从GitHub克隆代码</h3><p>现在我们进入<code>/var/www/html</code>中，clone下之前托管在 GitHub上的博客源代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/HongFengLuoYe/HongFengLuoYe.github.io.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置Nginx根目录"><a href="#配置Nginx根目录" class="headerlink" title="配置Nginx根目录"></a>配置Nginx根目录</h3><p>前面说了，nginx 默认的目录为 <code>/var/www/html</code>，我们将我们的博客的源代码 clone 至此，并修改 <code>/etc/nginx/sites-available/default</code>，将 server 下的 root 字段值修改为 clone 后的博客目录路径。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80 default_server;</span><br><span class="line">    listen [::]:80 default_server;</span><br><span class="line">    root /var/www/html/HongFengLuoYe.github.io;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>我的博客在 GitHub 上的仓库名为 <code>https://github.com/HongFengLuoYe/HongFengLuoYe.github.io.git</code>，所以修改为:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root /var/www/html/HongFengLuoYe.github.io;</span><br></pre></td></tr></table></figure>
+
+<p>这个时候，我们即使没有备案，通过 IP 也可以访问自己的博客，可以直接在浏览器的地址栏输入阿里云公网的 IP 访问自己的博客。如果通过公网 IP 访问没有问题，说明环境搭建成功。</p>
+<p>最后重启Nginx</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建Git钩子"><a href="#创建Git钩子" class="headerlink" title="创建Git钩子"></a>创建Git钩子</h2><p>虽然看起来我们似乎将原来托管在GitHub迁移到阿里云服务器上了，但是博客源代码是通过手动<code>git clone</code>下来到<code>/var/www/html/HongFengLuoYe.github.io</code>上的，如果我们需要对博客进行修改或者发布新的文章，运行<code>hexo d</code>还是将会更新的博客源代码上传至GitHub上，并没有自动上传到阿里云的服务器上。如果想同步修改，解决方法很简单，在阿里云的机器上搭建一个Git远程仓库（相对本地仓库来说），像GitHub一样，每次通过<code>hexo d</code> 时候，也将网站内容更新到阿里云的Git仓库中，并自动同步到<code>/var/www/html/HongFengLuoYe.github.io</code>中，这就是上图所示的原理。做法如下：</p>
+<h3 id="创建git用户"><a href="#创建git用户" class="headerlink" title="创建git用户"></a>创建git用户</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser git</span><br></pre></td></tr></table></figure>
+<p>在<code>/home/git</code>目录下创建裸仓 hexo.git：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/git</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改用户权限："><a href="#修改用户权限：" class="headerlink" title="修改用户权限："></a>修改用户权限：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br><span class="line">sudo chmod -R 777 home #为了操作方便我把home都设置了最高权限</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置阿里云和一键部署"><a href="#配置阿里云和一键部署" class="headerlink" title="配置阿里云和一键部署"></a>配置阿里云和一键部署</h2><h3 id="配置SSH公钥："><a href="#配置SSH公钥：" class="headerlink" title="配置SSH公钥："></a>配置SSH公钥：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>复制公钥，将公钥写入阿里云机器的 &#x2F;home&#x2F;git&#x2F;.ssh&#x2F;authorized_keys 文件中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .ssh/authorized_keys #如果没有authorized_keys就自己创建一个</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置Hooks"><a href="#设置Hooks" class="headerlink" title="设置Hooks"></a>设置Hooks</h3><p>在<code>/home/git/hexo/hooks/post-receive</code>文件中写入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">git --work-tree=/var/www/html/HongFengLuoYe.github.io --git-dir=/home/git/hexo.git checkout -f</span><br></pre></td></tr></table></figure>
+<p>修改权限<code>/var/www/html</code>文件夹权限，以免访问时候没有权限。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod -R 777 www</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改本地配置"><a href="#修改本地配置" class="headerlink" title="修改本地配置"></a>修改本地配置</h3><p>修改本地机器上的 _config.yml 文件，在 deploy 块中添加阿里云机器上刚创建的 hexo.git 仓库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: </span><br><span class="line">    github: git@github.com:HongFengLuoYe/HongFengLuoYe.github.io.git</span><br><span class="line">    hexo: git@47.104.153.138:/home/git/hexo.git,master</span><br></pre></td></tr></table></figure>
+
+<p>进入博客一键部署</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1 id="高级功能"><a href="#高级功能" class="headerlink" title="高级功能"></a>高级功能</h1><h2 id="实时刷新"><a href="#实时刷新" class="headerlink" title="实时刷新"></a>实时刷新</h2><h3 id="下载LiveReload"><a href="#下载LiveReload" class="headerlink" title="下载LiveReload"></a>下载LiveReload</h3><p>下载<a target="_blank" rel="noopener" href="http://livereload.com/">Mac客户端</a>，安装Chrome插件。<br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200307_28.png"></p>
+<h3 id="添加文件夹"><a href="#添加文件夹" class="headerlink" title="添加文件夹"></a>添加文件夹</h3><p>添加要监控的文件夹，开启web服务，打开网页，点击插件把图标变成黑点，编辑文本时只要保存（CTRL+S）后会实时刷新页面。<br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200307_24.png"><br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200307_25.png"><br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200307_27.png"></p>
+<h2 id="博客加密"><a href="#博客加密" class="headerlink" title="博客加密"></a>博客加密</h2><blockquote>
+<p>参考： <a target="_blank" rel="noopener" href="https://github.com/MikeCoder/hexo-blog-encrypt">https://github.com/MikeCoder/hexo-blog-encrypt</a></p>
+</blockquote>
+<p>Hexo会将我们本地编写好的markdown文章进行编译，然后生成静态页面部署到服务器之中。</p>
+<p>但有些文章我们不希望公开，希望将文章进行加密，用户只有输入正确的验证码之后，才能进行访问。</p>
+<p>这种情况，wordpress、emlog等其他博客系统很容易进行设置，但是Hexo却不行。</p>
+<p>为了解决这个需求，我们需要引入<code>hexo-blog-encrypt</code> 。</p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li><p>一旦你输入了正确的密码, 它将会被存储在本地浏览器的localStorage中。再次访问，不需输入密码。</p>
+</li>
+<li><p>支持按标签加密。</p>
+</li>
+<li><p>所有的核心功能都是由原生的API所提供的。 在 Node.js中, 我们使用 Crypto。在浏览器中, 我们使用 Web Crypto API。</p>
+</li>
+<li><p>PBKDF2, SHA256 被用于分发密钥, AES256-CBC 被用于加解密, 还使用 HMAC 来验证密文的来源, 并确保其未被篡改。</p>
+</li>
+<li><p>广泛地使用 Promise 来进行异步操作, 以此确保线程不被杜塞。</p>
+</li>
+<li><p>过时的浏览器将不能正常显示, 因此, 请升级浏览器。</p>
+</li>
+</ul>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-blog-encrypt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h3><p>将 “password” 字段添加到文章信息头：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">date: 2016-03-30 21:18:02</span><br><span class="line">password: abcd1234xxx</span><br></pre></td></tr></table></figure>
+<hr>
+<p>再使用<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>在本地预览加密的文章。</p>
+<h3 id="文章信息头"><a href="#文章信息头" class="headerlink" title="文章信息头"></a>文章信息头</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">tags:</span><br><span class="line">- 加密文章tag</span><br><span class="line">date: 2019-10-26 20:22:58</span><br><span class="line">password: mikemessi</span><br><span class="line">abstract: 该文章已加密, 请输入密码查看。</span><br><span class="line">message: 该文章已加密, 请输入密码查看。</span><br><span class="line">wrong_pass_message: 密码不正确，请重新输入！</span><br><span class="line">wrong_hash_message: 文章不能被校验, 不过您还是能看看解密后的内容！</span><br></pre></td></tr></table></figure>
+
+<h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>示例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">encrypt: # hexo-blog-encrypt</span><br><span class="line">  abstract: 有东西被加密了, 请输入密码查看.</span><br><span class="line">  message: 您好, 这里需要密码.</span><br><span class="line">  tags:</span><br><span class="line">  - &#123;name: tagName, password: 密码A&#125;</span><br><span class="line">  - &#123;name: tagName, password: 密码B&#125;</span><br><span class="line">  template: &lt;div id=&quot;hexo-blog-encrypt&quot; data-wpm=&quot;&#123;&#123;hbeWrongPassMessage&#125;&#125;&quot; data-whm=&quot;&#123;&#123;hbeWrongHashMessage&#125;&#125;&quot;&gt;&lt;div class=&quot;hbe-input-container&quot;&gt;&lt;input type=&quot;password&quot; id=&quot;hbePass&quot; placeholder=&quot;&#123;&#123;hbeMessage&#125;&#125;&quot; /&gt;&lt;label&gt;&#123;&#123;hbeMessage&#125;&#125;&lt;/label&gt;&lt;div class=&quot;bottom-line&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script id=&quot;hbeData&quot; type=&quot;hbeData&quot; data-hmacdigest=&quot;&#123;&#123;hbeHmacDigest&#125;&#125;&quot;&gt;&#123;&#123;hbeEncryptedData&#125;&#125;&lt;/script&gt;&lt;/div&gt;</span><br><span class="line">  wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试.</span><br><span class="line">  wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.</span><br></pre></td></tr></table></figure>
+<p>注：若文章中采用_config.yml中的全局配置，则文章的tags只能有一个，若有多个tags，则失效。</p>
+<h3 id="配置优先级"><a href="#配置优先级" class="headerlink" title="配置优先级"></a>配置优先级</h3><p>文章信息头 &gt; _config.yml (站点根目录下的) &gt; 默认配置</p>
+<h2 id="定制版权页"><a href="#定制版权页" class="headerlink" title="定制版权页"></a>定制版权页</h2><p>效果：HFY导航到GitHub主页，原文链接设置成GitHub Page页。发表日期和更新日期不可点击。<br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200308_30.png"><br>1.配置hexo的配置信息。<br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200308_31.png"><br>2.配置archer主题配置信息。<br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200308_32.png"><br>3.设置post.ejs。<br><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200308_33.png"></p>
+<p>具体信息参考：<a target="_blank" rel="noopener" href="https://github.com/HongFengLuoYe/HongFengLuoYe.github.io"><strong>HFY主页</strong></a></p>
+<h1 id="iPhone使用"><a href="#iPhone使用" class="headerlink" title="iPhone使用"></a>iPhone使用</h1><h2 id="手机越狱"><a href="#手机越狱" class="headerlink" title="手机越狱"></a>手机越狱</h2><h3 id="checkra1n"><a href="#checkra1n" class="headerlink" title="checkra1n"></a>checkra1n</h3><p><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_44.png"></p>
+<blockquote>
+<p>网址：<a target="_blank" rel="noopener" href="https://checkra.in/">https://checkra.in/</a></p>
+</blockquote>
+<h3 id="安装NewTerm-2"><a href="#安装NewTerm-2" class="headerlink" title="安装NewTerm 2"></a>安装NewTerm 2</h3><p><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_45.png"><br>这个是一个手机终端软件，越狱后，使用越狱商店cydia添加源：<code>http://apt.cydiabc.top/</code> ，搜索NewTerm2安装。</p>
+<h2 id="准备工作-1"><a href="#准备工作-1" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="安装OpenSSH"><a href="#安装OpenSSH" class="headerlink" title="安装OpenSSH"></a>安装OpenSSH</h3><p><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_46.png"></p>
+<ul>
+<li>在手机终端操作，效率太低，OpenSSH可以通SSH连接电脑操作，同上面一样，安装OpenSSH。打开终端工具，输入：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh root@192.168.0.104</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其中ip地址是你手机WiFi地址，要保证手机与电脑处于同一个频段的WiFi下，这是会提示你输入密码连接。</li>
+</ul>
+<blockquote>
+<p>1.输入默认密码<code>alpine</code>（不会明文显示）。<br>2.输入命令：<code>su</code> 回车取得root权限。<br>3.输入：<code>passwd root</code>，更改root帐户的密码。<br>4.输入新密码（无明文显示）。<br>5.输入<code>passwd mobile</code>，更改mobile帐户的密码。<br>6.重新输入新密码。</p>
+</blockquote>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_47.png"></p>
+<ul>
+<li>好了，修改完密码，可以在电脑端给手机安装Git了。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install git</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过键入git –version以下命令来验证安装是否成功：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git --version</span><br><span class="line">$ git version 2.9.2</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用以下命令配置您的Git用户名和电子邮件，用您自己的名字代替Emma的名字。这些详细信息将与您创建的所有提交相关联：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.email &quot;1070386120@qq.com&quot;</span><br><span class="line">$ git config --global user.name &quot;Lili&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_48.png"><br>安装Node.js，它自带npm包管理。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install nodejs</span><br><span class="line"></span><br><span class="line">#查看node版本</span><br><span class="line">$ node --version</span><br><span class="line">v6.3.0</span><br><span class="line"></span><br><span class="line">#查看npm版本</span><br><span class="line">$ npm  --version</span><br><span class="line">3.10.3</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><h3 id="安装hexo-1"><a href="#安装hexo-1" class="headerlink" title="安装hexo"></a>安装hexo</h3><p><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_50.png"><br>因为iOS属于ARM架构的Darwin系统，所以JS的代码和Mac上是有区别的，需要重新安装hexo。我在iPhone的根目录下，新建了一个home文件，给了所有权限。这个文件里面安装了hexo。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir home</span><br><span class="line">$ cd home</span><br><span class="line">$ mkdir Blog</span><br><span class="line">$ cd Blog</span><br></pre></td></tr></table></figure>
+<p>安装hexo的代码和Mac上一样，只是他在拉取的时候，会自动拉取手机平台的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init &lt;folder&gt;</span><br></pre></td></tr></table></figure>
+<p>安装完成后，可以生产网站预览下，命令和之前一样<code>hexo g</code>与<code>hexo s</code>，在手机端的浏览器打开网址：<code>http://localhost:4000/</code>,就可以看见生成的博客了。</p>
+<h3 id="安装主题-1"><a href="#安装主题-1" class="headerlink" title="安装主题"></a>安装主题</h3><p><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_51.png"><br>主题的思路是这样的，先去拉取官方的，按照上面主题的配置方法，然后再去做暴力替换：</p>
+<blockquote>
+<p>首先备份 archer 下所有你自定义过的文件（包括 _config.yml 和 source 文件夹下添加的文件等），然后删除 archer，再重新安装，最后将备份的文件替换到原来的位置即可。</p>
+</blockquote>
+<p>这里插句话：文件传输我用微信，文件管理用<a target="_blank" rel="noopener" href="https://www.abcydia.com/read-16560.html"><strong>Filza</strong></a>。</p>
+<h3 id="导入markdwon资源"><a href="#导入markdwon资源" class="headerlink" title="导入markdwon资源"></a>导入markdwon资源</h3><p><img src="/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/Snip20200313_53.png"><br>把电脑端的source文件导入进来，生成网站就可以了。</p>
+<blockquote>
+<p><strong>试了很多次一键部署都没有成功，因为Unix的限制，接下来想通push脚本去做部署，等待更新吧。。。</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>感谢以下博客：</strong><br><a target="_blank" rel="noopener" href="https://leehoward.cn/">leehoward</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34272417/article/details/99491294">howarzheng</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/bcfde206b29a">青草_e75f</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>HFY
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2023/03/22/%E6%8A%80%E6%9C%AF/Blog/" title="Blog">http://example.com/2023/03/22/技术/Blog/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/03/22/%E5%95%86%E4%B8%9A/Alibaba/" rel="prev" title="Alibaba">
+                  <i class="fa fa-angle-left"></i> Alibaba
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/03/22/%E6%8A%80%E6%9C%AF/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/" rel="next" title="Java">
+                  Java <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">HFY</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
+<!-- 页面点击小红心 --> <script type="text/javascript" src="/js/clicklove.js"></script>
